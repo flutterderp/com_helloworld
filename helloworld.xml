@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+  <name>Hello World</name>
+  <creationDate>August 2021</creationDate>
+  <author>Otterly Useless</author>
+  <authorUrl>https://github.com/flutterderp</authorUrl>
+  <copyright>Otterly Useless</copyright>
+  <license>MIT</license>
+  <version>0.0.1</version>
+  <description>A hello world component.</description>
+
+  <!-- This is the PHP namespace under which the extension's
+  code is organised. It should follow this format:
+
+  Vendor\Component\ComponentName
+
+  "Vendor" can be your company or your own name
+
+  The "ComponentName" section MUST match the name used
+  everywhere else for your component. Whatever the name of
+  this XML file is, the namespace must match (ignoring CamelCase).
+  -->
+  <namespace path="src/">Flutterderp\Component\HelloWorld</namespace>
+
+  <administration>
+    <menu link="index.php?option=com_helloworld">Hello World</menu>
+
+    <files folder="admin/">
+      <folder>services</folder>
+      <folder>src</folder>
+      <folder>tmpl</folder>
+    </files>
+  </administration>
+</extension>

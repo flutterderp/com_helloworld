@@ -1,0 +1,9 @@
+_notes-and-misc/*
+create-package.sh
+exclude.lst
+README.md
+*._*
+*.git*
+*.svn*
+*.DS_Store
+*.zip
