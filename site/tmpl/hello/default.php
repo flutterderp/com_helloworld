@@ -3,7 +3,7 @@
 use Joomla\CMS\Language\Text;
 
 /**
- * @package     Joomla.Administrator
+ * @package     Joomla.Site
  * @subpackage  com_helloworld
  *
  * @copyright   Copyright (C) 2021 Otterly Useless. All rights reserved.

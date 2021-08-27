@@ -6,7 +6,7 @@
   <authorUrl>https://github.com/flutterderp</authorUrl>
   <copyright>Otterly Useless</copyright>
   <license>MIT License</license>
-  <version>0.0.1</version>
+  <version>0.0.4</version>
   <description>A hello world component.</description>
 
   <!-- This is the PHP namespace under which the extension's
@@ -22,13 +22,29 @@
   -->
   <namespace path="src/">Flutterderp\Component\HelloWorld</namespace>
 
+  <files folder="site">
+    <folder>language</folder>
+    <folder>src</folder>
+    <folder>tmpl</folder>
+  </files>
+
+  <languages>
+    <language tag="en-GB">site/language/en-GB/en-GB.com_helloworld.ini</language>
+  </languages>
+
   <administration>
     <menu link="index.php?option=com_helloworld">Hello World</menu>
 
     <files folder="admin/">
+      <folder>language</folder>
       <folder>services</folder>
       <folder>src</folder>
       <folder>tmpl</folder>
     </files>
+
+    <languages>
+      <language tag="en-GB">admin/language/en-GB/en-GB.com_helloworld.ini</language>
+      <language tag="en-GB">admin/language/en-GB/en-GB.com_helloworld.sys.ini</language>
+    </languages>
   </administration>
 </extension>
