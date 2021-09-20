@@ -13,3 +13,5 @@ use Joomla\CMS\Language\Text;
 defined('_JEXEC') or die;
 ?>
 <h2><?php echo Text::_('COM_HELLOWORLD_MSG_HELLO_WORLD'); ?></h2>
+
+<p><?php echo $this->getModel()->getItem()->message; ?></p>
