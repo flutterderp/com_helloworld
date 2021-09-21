@@ -6,7 +6,7 @@
   <authorUrl>https://github.com/flutterderp</authorUrl>
   <copyright>Otterly Useless</copyright>
   <license>MIT License</license>
-  <version>0.0.6</version>
+  <version>0.0.7</version>
   <description>A hello world component.</description>
 
   <!-- This is the PHP namespace under which the extension's
@@ -39,6 +39,7 @@
       <folder>language</folder>
       <folder>services</folder>
       <folder>src</folder>
+      <folder>sql</folder>
       <folder>tmpl</folder>
     </files>
 
@@ -47,4 +48,20 @@
       <language tag="en-GB">admin/language/en-GB/en-GB.com_helloworld.sys.ini</language>
     </languages>
   </administration>
+
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
 </extension>
