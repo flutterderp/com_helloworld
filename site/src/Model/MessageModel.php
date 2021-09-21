@@ -3,6 +3,7 @@ namespace Flutterderp\Component\HelloWorld\Site\Model;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
 use Joomla\CMS\MVC\Model\ItemModel;
 use Joomla\CMS\Language\Text;
 
@@ -28,8 +29,23 @@ class MessageModel extends ItemModel
 	 */
 	public function getItem($pk = null): object
 	{
+		// This gives us a Joomla\Input\Input object
+		$input = Factory::getApplication()->getInput();
+		$greetingType = $input->getInt('greetingType', 1);
+
 		$item = new \stdClass();
-		$item->message = Text::_('COM_HELLOWORLD_MSG_GREETING');
+
+		switch($greetingType)
+		{
+			case 2 :
+				$item->message = Text::_('COM_HELLOWORLD_MSG_GREETING_GOODBYE');
+				break;
+			case 1 :
+			default :
+				$item->message = Text::_('COM_HELLOWORLD_MSG_GREETING_HELLO');
+				break;
+		}
+
 		return $item;
 	}
 }
